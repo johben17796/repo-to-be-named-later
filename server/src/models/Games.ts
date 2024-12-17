@@ -11,9 +11,10 @@ interface GameCreationAttributes extends GameAttributes {}
 
 
 export class Game extends Model<GameAttributes, GameCreationAttributes> implements GameAttributes {
-    public game_id: number;
-    public name: string;
-    public slug: string;
+    public game_id!: number;
+    public name!: string;
+    public slug!: string;
+  
 
 
 }
@@ -31,7 +32,8 @@ export function GameFactory(sequelize: Sequelize): typeof Game {
       },
       slug: {
         type: DataTypes.STRING,
-      },
+      }
+      
 
     },
     {
