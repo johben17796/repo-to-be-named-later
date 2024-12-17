@@ -5,7 +5,6 @@ import type { Request, Response } from 'express';
 const router = express.Router();
 
 // GET /games - Get games from RAWG
-// @ts-ignore
 router.get('/', async (_req: Request, res: Response) => {
     try {
         // console.log(process.env.RAWG_API_KEY);
@@ -23,7 +22,7 @@ router.get('/', async (_req: Request, res: Response) => {
         res.send(data);
       } catch (err) {
         console.log('an error occurred', err);
-        return [];
+        res.json();
     }
 });
 
