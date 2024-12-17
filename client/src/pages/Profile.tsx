@@ -4,11 +4,13 @@
 export default function Profile() {
     return(
         <section className="profile">
-            <h1>PROFILE PLACEHOLDER</h1>
-            <br />
-            <p>look at this cat.</p>
-            <br />
             <img src="https://placecats.com/neo_banana/300/200" alt="mlem"></img>
+            <div className="profileCard">
+                {/* <h1>TITLE STYLE WITH PROFILE NAME VAR</h1> */}
+            </div>
+            <div className="list">
+                {/* import list display component */}
+            </div>
         </section>
     )
 }
