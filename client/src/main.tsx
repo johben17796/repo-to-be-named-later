@@ -6,9 +6,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css'
 //imports - pages
 import App from './App.tsx'
-import Home from './Pages/Home.tsx';
-import Error from './Pages/Error.tsx';
-import Profile from './Pages/Profile.tsx';
+import Home from './pages/Home.tsx';
+import Error from './pages/Error.tsx';
+import Profile from './pages/Profile.tsx';
 
 //Router definition
 
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/About',
+        path: '/Profile',
         element: <Profile />,
       },
     ],
