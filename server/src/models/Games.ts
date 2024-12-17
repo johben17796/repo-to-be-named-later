@@ -1,3 +1,6 @@
+// just for the record, GAME in this really means "favorited game"
+
+
 import { DataTypes, Sequelize, Model} from 'sequelize';
 
 interface GameAttributes {
