@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import express from 'express';
 // import type { Request, Response } from 'express';
 
@@ -57,11 +56,3 @@ export async function getRec(gamesArray: string[]): Promise<GameRec[]> {
 
     return jsonArray;
 }
-=======
-import express from 'express';
-// import type { Request, Response } from 'express';
-
-const router = express.Router();
-
-export { router as geminiRouter };
->>>>>>> 91313f3395d74feb2472f3dc9095ff79965dcdac
