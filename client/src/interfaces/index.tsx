@@ -1,4 +1,4 @@
-export interface GameRec {
-    title: string,
-    summary: string,
-}
+// export interface GameRec {
+//     title: string,
+//     summary: string,
+// }
