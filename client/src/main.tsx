@@ -9,6 +9,7 @@ import App from './App.tsx'
 import Home from './pages/Home.tsx';
 import Error from './pages/Error.tsx';
 import Profile from './pages/Profile.tsx';
+import RecsPage from './pages/Recs.tsx';
 
 //Router definition
 
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
         path: '/Profile',
         element: <Profile />,
       },
+      {
+        path: '/Recs',
+        element: <RecsPage />
+      }
     ],
   },
 ]);
