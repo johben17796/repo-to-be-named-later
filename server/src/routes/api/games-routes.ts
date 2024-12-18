@@ -1,6 +1,7 @@
 import { Router, Request, Response } from "express";
 import { Game } from "../../models/index.js";
 
+const router = Router();
 const getAllGames = async (_req: Request, res: Response) => {
     try {
       const games = await Game.findAll();
@@ -37,7 +38,6 @@ const addGame = async (req: Request, res: Response) => {
     }
   };
   
-  const router = Router();
   router.get('/', getAllGames);
   router.post('/', addGame)
   router.delete('/:id', deleteGame)
