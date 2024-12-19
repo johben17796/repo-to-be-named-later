@@ -1,5 +1,5 @@
 import axios from "axios";
-import { handleError } from "../Helpers/ErrorHandler";
+import { handleError } from "./ErrorHandler";
 
 // Define the base API URL
 const API_BASE_URL = "http://localhost:5167/api/";
