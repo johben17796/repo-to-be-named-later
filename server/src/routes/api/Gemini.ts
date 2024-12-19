@@ -1,13 +1,12 @@
 
 import express from 'express';
-// import type { Request, Response } from 'express';
+import type { Request, Response } from 'express';
 
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
 import * as dotenv from 'dotenv';
 dotenv.config();
 
-const router = express.Router();
 const key = process.env.GEMINI_KEY;
 const genAI = new GoogleGenerativeAI( key || '' );
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
@@ -23,16 +22,22 @@ const prompt = `My favorite video games are ${gameInject}.
  Never include backticks in your response, only the JSON data.
  `;
  
+ const router = express.Router();
  
-//get response based on variable
+ //get response based on variable
 router.get('/', async (_req: Request, res: Response) => {
     try {
         
         const result = await model.generateContent(prompt);
 
         res.status(200).json(result.response.text());
+
+        res.status(200).send(result.response.text());
+
     } catch (error) {
+
         res.status(500).json({error: 'Error fetching Gemini Response.'});
+
     }
 })
 
