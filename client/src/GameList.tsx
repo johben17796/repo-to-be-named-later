@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { fetchGames } from './api/fetchGames';
+// import { fetchGames } from './api/fetchGames';
+import { retrieveGames } from './api/searchRAWG';
 
 interface Game {
   id: number;
@@ -16,7 +17,7 @@ const GameList: React.FC = () => {
   useEffect(() => {
     const loadGames = async () => {
       try {
-        const data = await fetchGames();
+        const data = await retrieveGames();
         setGames(data.results);
       } catch (err) {
         setError('Failed to fetch games.');

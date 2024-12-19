@@ -1,5 +1,5 @@
 // import { ApiMessage } from "../interfaces/ApiMessage";
-import { RawgData } from "../interfaces/rawgData";
+import { RawgData } from "../interfaces/RawgData";
 
 const retrieveGames = async () => {
     try {

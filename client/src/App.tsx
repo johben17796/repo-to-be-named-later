@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 
 const App: React.FC = () => {
   const [username, setUsername] = useState('');
@@ -9,28 +9,28 @@ const App: React.FC = () => {
   const [error, setError] = useState('');
   const [isRegistering, setIsRegistering] = useState(false);
 
-  const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError('');
+  // const handleLogin = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setError('');
 
-    const apiKey = import.meta.env.VITE_RAWG_API_KEY;
-    const endpoint = `https://api.rawg.io/api/users/login?key=${apiKey}`;
+  //   const apiKey = import.meta.env.VITE_RAWG_API_KEY;
+  //   const endpoint = `https://api.rawg.io/api/users/login?key=${apiKey}`;
 
-    try {
-      const response = await axios.post(endpoint, { username, password });
+  //   try {
+  //     const response = await axios.post(endpoint, { username, password });
 
-      if (response.data.token) {
-        setToken(response.data.token);
-        localStorage.setItem('rawg_token', response.data.token);
-        alert('Login successful!');
-      } else {
-        throw new Error('Token not received.');
-      }
-    } catch (err) {
-      console.error(err);
-      setError('Login failed. Please check your credentials.');
-    }
-  };
+  //     if (response.data.token) {
+  //       setToken(response.data.token);
+  //       localStorage.setItem('rawg_token', response.data.token);
+  //       alert('Login successful!');
+  //     } else {
+  //       throw new Error('Token not received.');
+  //     }
+  //   } catch (err) {
+  //     console.error(err);
+  //     setError('Login failed. Please check your credentials.');
+  //   }
+  // };
 
   const handleRegister = (e: React.FormEvent) => {
     e.preventDefault();
