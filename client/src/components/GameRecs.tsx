@@ -1,13 +1,17 @@
 
-// import { GameRec } from '../interfaces';
 import { useState } from 'react';
 import { getRec } from '../api/gemini';
+
+interface GameRec {
+    title: string,
+    summary: string
+}
 
 //TESTING ARRAYS
 // const testGames = ['Bloons Tower Defense 4', 'Silent Hill', 'Apex Legends'];
 
 //DIALOGUE ARRAYS
-// const greetingArray = ['Awesome Picks! You should check these out!', 'Hmm... let me think... what about these?', 'You sure know your games! Have you tried these?']
+const greetingArray = ['Awesome Picks! You should check these out!', 'Hmm... let me think... what about these?', 'You sure know your games! Have you tried these?']
 
 // VARIABLES
 
