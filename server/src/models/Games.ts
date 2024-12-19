@@ -1,24 +1,28 @@
 // just for the record, GAME in this really means "favorited game"
 
 
-import { DataTypes, Sequelize, Model } from 'sequelize';
+import { DataTypes, Sequelize, Model, Optional } from 'sequelize';
+import { User } from './Users.js';
 
 interface GameAttributes {
-    game_id: number;
-    name: string;
-    slug: string;
+  game_id: number;
+  name: string;
+  slug: string;
+  userfav_id: number;
 
 }
 
-interface GameCreationAttributes extends GameAttributes {}
+
+interface GameCreationAttributes extends Optional<GameAttributes, 'game_id'> { }
 
 
 export class Game extends Model<GameAttributes, GameCreationAttributes> implements GameAttributes {
-    public game_id!: number;
-    public name!: string;
-    public slug!: string;
-  
+  public game_id!: number;
+  public name!: string;
+  public slug!: string;
+  public userfav_id!: number;
 
+  public readonly userfav?: User
 
 }
 
@@ -35,8 +39,14 @@ export function GameFactory(sequelize: Sequelize): typeof Game {
       },
       slug: {
         type: DataTypes.STRING,
+      },
+
+      userfav_id: {
+        type: DataTypes.INTEGER,
+        allowNull: true
       }
-      
+
+
 
     },
     {

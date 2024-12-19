@@ -6,7 +6,8 @@ import { UserFactory } from "./Users.js";
 const User = UserFactory(sequelize)
 const Game = GameFactory(sequelize)
 
-User.hasMany(Game, {
+User.hasMany(Game, { 
+    foreignKey: 'userfav_id',
     onDelete: 'CASCADE'
 });
 
