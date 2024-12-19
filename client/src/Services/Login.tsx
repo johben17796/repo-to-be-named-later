@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { loginAPI, UserProfileToken } from "../api/authAPI"; // Adjust path as needed
+import { loginAPI, UserProfileToken } from "./authAPI"; // Adjust path as needed
 
 const Login: React.FC = () => {
   const [username, setUsername] = useState("");
