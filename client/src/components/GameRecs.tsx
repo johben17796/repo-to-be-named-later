@@ -1,5 +1,5 @@
 // import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { getRec } from '../api/gemini';
 
 interface GameRec {
@@ -15,7 +15,6 @@ const greetingArray = ['Awesome Picks! You should check these out!', 'Hmm... let
 
 // VARIABLES
 //TODO: GET REC JSON FROM GEMINI - PARSE - RETURN AS GAMEREC OBJECT ARRAY
-const recArray = await getRec();
 
 //GET GAMES ARRAY
 
@@ -53,7 +52,14 @@ function GameRecsModule(gameRecsArray: GameRec[]) {
 
 
 function GameRecs() {
-    const gameRecsMod = GameRecsModule(recArray);
+    const [rec, setRec] = useState<GameRec[]>([]);
+
+    useEffect(() => {
+        getRec().then((result) => {
+            setRec(result)
+        })
+    })
+    const gameRecsMod = GameRecsModule(rec);
     const randomIndex = Math.floor(Math.random() * greetingArray.length);
 
     return(
@@ -66,33 +72,33 @@ function GameRecs() {
 
 //REC MODAL PANEL
 
-const [recPanel, setrecPanel] = useState(false);
+// const [recPanel, setrecPanel] = useState(false);
 
-function RecPanelButton() {
-    const [expandText, setexpandText] = useState(0);
-    const text = ['Get Suggestions', 'Get Another']
+// function RecPanelButton() {
+//     const [expandText, setexpandText] = useState(0);
+//     const text = ['Get Suggestions', 'Get Another']
 
-    const handleSubmit = (e: any) => {
-        e.preventDefault();
+//     const handleSubmit = (e: any) => {
+//         e.preventDefault();
 
-        if (!recPanel) {
-            setrecPanel(true);
-            setexpandText(1);
-        } else {
-            setrecPanel(false);
-            setexpandText(0);
-        };
-    }
+//         if (!recPanel) {
+//             setrecPanel(true);
+//             setexpandText(1);
+//         } else {
+//             setrecPanel(false);
+//             setexpandText(0);
+//         };
+//     }
 
-    return(
-    <button onSubmit={handleSubmit}>{text[expandText]}</button>
-)
-}
+//     return(
+//     <button onSubmit={handleSubmit}>{text[expandText]}</button>
+// )
+// }
 
 export default function RecPanel() {
     return (
         <section className='RecsPanel'>
-            <RecPanelButton />
+            {/* <RecPanelButton /> */}
             <GameRecs />
         </section>
     )

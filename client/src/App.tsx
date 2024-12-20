@@ -4,7 +4,7 @@ import Footer from './components/Footer.js';
 function App() {
 //TODO: IMPLEMENT LIGHT/DARK
   return (
-    <div>
+    <>
       <header>
         <Header />
       </header>
@@ -16,7 +16,7 @@ function App() {
         <Footer />
       </footer>
       </div>
-    </div>
+    </>
   )
 }
 
