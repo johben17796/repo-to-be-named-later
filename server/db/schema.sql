@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS fourtet_db;
+
+CREATE DATABASE fourtet_db;
