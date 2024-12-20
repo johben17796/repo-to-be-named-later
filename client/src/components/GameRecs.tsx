@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { useState } from 'react';
 import { getRec } from '../api/gemini';
 
@@ -37,12 +37,13 @@ function renderRecs(gameRec: GameRec) {
             </div>
         </>
     );
+    // return '';
 }
 
 //FORMAT CARDS INTO MODULE
 
 function GameRecsModule(gameRecsArray: GameRec[]) {
-    const module = [];
+    let module: JSX.Element[] = [];
     for (let i = 0; i < gameRecsArray.length; i++) {
         const newCard = renderRecs(gameRecsArray[i]);
         module.push(newCard);
