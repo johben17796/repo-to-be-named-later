@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { useState } from 'react';
 import { getRec } from '../api/gemini';
 
@@ -14,7 +14,7 @@ interface GameRec {
 const greetingArray = ['Awesome Picks! You should check these out!', 'Hmm... let me think... what about these?', 'You sure know your games! Have you tried these?']
 
 // VARIABLES
-
+//TODO: GET REC JSON FROM GEMINI - PARSE - RETURN AS GAMEREC OBJECT ARRAY
 const recArray = await getRec();
 
 //GET GAMES ARRAY
@@ -37,12 +37,13 @@ function renderRecs(gameRec: GameRec) {
             </div>
         </>
     );
+    // return '';
 }
 
 //FORMAT CARDS INTO MODULE
 
 function GameRecsModule(gameRecsArray: GameRec[]) {
-    const module = [];
+    let module: JSX.Element[] = [];
     for (let i = 0; i < gameRecsArray.length; i++) {
         const newCard = renderRecs(gameRecsArray[i]);
         module.push(newCard);
