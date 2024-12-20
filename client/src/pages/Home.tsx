@@ -1,6 +1,6 @@
 //imports
 import { useState } from "react";
-import GameList from "../components/GameList";
+// import GameList from "../components/GameList";
 //return code
 export default function Home() {
 
@@ -29,7 +29,7 @@ export default function Home() {
                 <button type="submit"></button>
             </form>
             <p>Or pick from the list below!</p>
-            <GameList />
+            {/* <GameList /> */}
         </section>
     );
 }

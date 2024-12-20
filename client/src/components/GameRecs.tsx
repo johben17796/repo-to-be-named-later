@@ -14,9 +14,6 @@ interface GameRec {
 const greetingArray = ['Awesome Picks! You should check these out!', 'Hmm... let me think... what about these?', 'You sure know your games! Have you tried these?']
 
 // VARIABLES
-//TODO: GET REC JSON FROM GEMINI - PARSE - RETURN AS GAMEREC OBJECT ARRAY
-const recsArray = getRec();
-//GET GAMES ARRAY
 
 //FORMAT REC INTO CARD
 

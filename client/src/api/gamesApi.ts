@@ -1,6 +1,6 @@
 export const fetchGames = async () => {
     try{
-        const response = await fetch('/api/games-Routes.ts', {
+        const response = await fetch('/api/RAWG/', {
             method:'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -9,12 +9,12 @@ export const fetchGames = async () => {
         const data = await response.json();
 
         if (!response.ok) {
-            throw new Error('Invalid API Response - FSAPIROUTE');
+            throw new Error('Invalid API Response - FSAPIROUTE - GAMESFETCH');
         };
 
         return data
     }catch (error) {
-        console.log('ERROR - FSAPIROUTE');
+        console.log('ERROR - FSAPIROUTE - GAMESFETCH');
         return '';
     }
 }
