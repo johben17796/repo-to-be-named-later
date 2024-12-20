@@ -15,7 +15,7 @@ const greetingArray = ['Awesome Picks! You should check these out!', 'Hmm... let
 
 // VARIABLES
 //TODO: GET REC JSON FROM GEMINI - PARSE - RETURN AS GAMEREC OBJECT ARRAY
-
+const recsArray = getRec();
 //GET GAMES ARRAY
 
 //FORMAT REC INTO CARD

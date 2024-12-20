@@ -1,5 +1,6 @@
 //imports
 import { useState } from "react";
+import GameList from "../components/GameList";
 //return code
 export default function Home() {
 
@@ -19,14 +20,16 @@ export default function Home() {
             </div>
             {/* search bar to build rawg request */}
             <form className="searchArea">
-                <input 
+                <input
                     value={search}
-                    placeholder="Find a Game!" 
+                    placeholder="Find a Game!"
                     id="search"
-                    onChange={handleInputchange} 
-                    />
+                    onChange={handleInputchange}
+                />
                 <button type="submit"></button>
             </form>
+            <p>Or pick from the list below!</p>
+            <GameList />
         </section>
     );
 }
