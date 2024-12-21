@@ -2,7 +2,7 @@
 
 
 import { DataTypes, Sequelize, Model, Optional } from 'sequelize';
-import { User } from './Users.js';
+// import { User } from './Users.js';
 
 interface GameAttributes {
   game_id: number;
@@ -22,7 +22,7 @@ export class Game extends Model<GameAttributes, GameCreationAttributes> implemen
   public slug!: string;
   public userfav_id!: number;
 
-  public readonly userfav?: User
+  // public readonly userfav?: User
 
 }
 
