@@ -32,7 +32,7 @@ const searchGames = async () => {
       if(!response.ok) {
         throw new Error('invalid RAWG API response, check network tab!');
       }
-      console.log(data);
+
       return data;
     } catch (err) {
       console.log('Error from data retrieval:', err);

@@ -16,7 +16,12 @@ export default function Home() {
     //Function that uses a text input to search for a game from RAWG
     const searchForGames = async (event: FormEvent, gameTitle: string) => {
         event.preventDefault();
-        searchGamesByName(gameTitle);
+        try {
+            const data = await searchGamesByName(gameTitle);
+            console.log(data);
+        } catch (err) {
+            console.error('No matches found!', err);
+        }
     }
 
     return (
