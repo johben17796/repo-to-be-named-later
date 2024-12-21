@@ -8,7 +8,7 @@ function App() {
       <header>
         <Header />
       </header>
-      <div className='bottomflex'>
+      <div className='bottomFlex'>
       <main>
         <Outlet />
       </main>
