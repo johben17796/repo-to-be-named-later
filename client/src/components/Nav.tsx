@@ -8,11 +8,11 @@ export default function NavBar() {
                 <li className={location.pathname === '/' ? 'active' : ''}>
                     <Link to="/">Home</Link>
                 </li>
-                <li className={location.pathname === '/About' ? 'active' : ''}>
-                    <Link to="/About">Profile</Link>
+                <li className={location.pathname === '/Profile' ? 'active' : ''}>
+                    <Link to="/Profile">Profile</Link>
                 </li>
-                <li className={location.pathname === '/Contact' ? 'active' : ''}>
-                    <Link to="/">another thing</Link>
+                <li className={location.pathname === '/Lists' ? 'active' : ''}>
+                    <Link to="/List">My List</Link>
                 </li>
             </ul>
         </nav>
