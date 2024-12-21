@@ -1,6 +1,6 @@
 //imports
 import { useState, FormEvent } from "react";
-import { retrieveGamesByName } from "../api/searchRAWG";
+import { searchGamesByName } from "../api/searchRAWG";
 // import { data } from "react-router-dom";
 // import GameList from "../components/GameList";
 //return code
@@ -16,7 +16,7 @@ export default function Home() {
     //Function that uses a text input to search for a game from RAWG
     const searchForGames = async (event: FormEvent, gameTitle: string) => {
         event.preventDefault();
-        retrieveGamesByName(gameTitle);
+        searchGamesByName(gameTitle);
     }
 
     return (
