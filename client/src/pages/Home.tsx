@@ -1,6 +1,6 @@
 //imports
 import { useState, FormEvent } from "react";
-import { searchGamesByName } from "../api/searchRAWG";
+import { searchGamesByName, searchGames } from "../api/searchRAWG";
 // import { data } from "react-router-dom";
 // import GameList from "../components/GameList";
 //return code
@@ -24,6 +24,17 @@ export default function Home() {
         }
     }
 
+    //Function to search all games on RAWG
+    const searchAllGames = async (event: FormEvent) => {
+        event.preventDefault();
+        try {
+            const data = await searchGames();
+            console.log(data);
+        } catch (err) {
+            console.error('No matches found!', err);
+        }
+    }
+
     return (
         <>
         <section>
@@ -41,6 +52,9 @@ export default function Home() {
                     onChange={handleInputchange}
                 />
                 <button type="submit">SEARCH</button>
+            </form>
+            <form onSubmit={(event: FormEvent) => searchAllGames(event)}>
+                <button type="submit">GET ALL GAMES</button>
             </form>
             <p>Or pick from the list below!</p>
             {/* <GameList /> */}
