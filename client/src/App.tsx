@@ -1,24 +1,32 @@
-import { Outlet } from 'react-router-dom';
-import Header from './components/Header.js';
-import Footer from './components/Footer.js';
-function App() {
-//TODO: IMPLEMENT LIGHT/DARK
+/*import React from "react";
+import HomePage from "./homePage";
+import Login from "./Login";
+
+const App: React.FC = () => {
   return (
-    <>
-      <header>
-        <Header />
-      </header>
-      <div className='bottomFlex'>
-      <main>
-        <Outlet />
-      </main>
-      <footer>
-        <Footer />
-      </footer>
-      </div>
-    </>
-  )
-}
+    <div>
+      <HomePage />
+    </div>
+  );
+};
+
+export default App;*/
+
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./homePage";
+import Login from "./Login";
+
+const App: React.FC = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Login" element={<Login />} />
+      </Routes>
+    </Router>
+  );
+};
 
 export default App;
 
