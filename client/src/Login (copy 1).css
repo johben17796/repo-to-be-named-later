@@ -1,0 +1,112 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e; /* Dark theme background */
+  color: #ffffff;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #646cff; /* Primary accent color */
+}
+
+div {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #2a2a2a; /* Card-like container */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+}
+
+input:focus {
+  outline: none;
+  border-color: #646cff;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #646cff;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 300ms ease;
+}
+
+button:hover {
+  background-color: #3c49a5;
+}
+
+button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+/* Error Message */
+p[style*="color: red"] {
+  color: #ff4d4d !important;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Welcome Section */
+div p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+div button {
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* Link-like Buttons */
+button[onClick] {
+  background: none;
+  color: #646cff;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0;
+}
+
+button[onClick]:hover {
+  text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  div {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
