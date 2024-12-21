@@ -34,8 +34,10 @@ router.get('/:id', async (req: Request, res: Response) => {
     }
   });
 
-  router.put('/addFavorite/:id', async (req: Request, res: Response) => {
+  router.put('/addFavoriteGames/:id', async (req: Request, res: Response) => {
+    //Add favorites games to a specified user_id
     const { id } = req.params;
+    //The list of games must be an array of JSON following the Game type
     const { favorites } = req.body;
     try {
       const user = await User.findByPk(id);
