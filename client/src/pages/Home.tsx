@@ -35,7 +35,7 @@ export default function Home() {
                     id="search"
                     onChange={handleInputchange}
                 />
-                <button type="submit"></button>
+                <button type="submit">SEARCH</button>
             </form>
             <p>Or pick from the list below!</p>
             {/* <GameList /> */}
