@@ -38,7 +38,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  place-items: top;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -51,7 +51,49 @@ h1 {
 
 /* Header and Footer */
 
+header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  /* margin: auto; */
+  /* width: 100%; */
+}
+
+.logo {
+  height: 250px;
+  width: 250px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+nav {
+  height: 300px;
+  width: 200px;
+}
+
+nav > ul > li {
+  padding: 35px;
+}
+
+#loginButton {
+  justify-content: right;
+  height: 100px;
+  width: 100px;
+  margin: 50px;
+}
+
+footer {
+  background-color: var(--backgroundPrimary);
+  color: var(--textSecondary);
+}
+
 /* Body and text */
+
+.bottomFlex {
+  margin: auto;
+  width: 90%;
+  justify-items: center;
+}
 
 /* component specific */
 
@@ -73,10 +115,7 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-footer {
-  background-color: var(--backgroundPrimary);
-  color: var(--textSecondary);
 
-
+#root {
+  width: 100%;
 }
-
